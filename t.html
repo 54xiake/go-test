@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/css/basic/emojify.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/js/emojify.min.js"></script>
+    <script type="javascript">
+        emojify.setConfig({img_dir : 'https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic'});
+    </script>
+</head>
+<body>
+&#x1f1e9;
+
+<div id="emoji"></div>
+<script>
+    var a = emojify.replace('I am happy :+1:');
+    document.querySelector('#emoji').innerHTML = a;
+</script>
+</body>
+</html>
