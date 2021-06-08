@@ -4,6 +4,7 @@ package main
 #include <stdio.h>
 #include <errno.h>
 
+
 void printint(int v) {
     printf("printint: %d\n", v);
 }
@@ -44,6 +45,7 @@ static void noreturn() {}
 #else
 	const char* os = "unknown";
 #endif
+
 
 
 */
