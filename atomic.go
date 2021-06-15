@@ -18,4 +18,10 @@ func main() {
 	v := atomic.LoadInt32(&value)
 	fmt.Println(v)
 
+	var a int32 = 13
+	addValue := atomic.AddInt32(&a, 1)
+	fmt.Println("增加之后:", addValue)
+	delValue := atomic.AddInt32(&a, -4)
+	fmt.Println("减少之后:", delValue)
+
 }

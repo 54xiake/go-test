@@ -4,7 +4,7 @@ package main
 #include <stdlib.h>
 #include <stdio.h>
 
-void printString(const char* s) {
+void printString1(const char* s) {
 	printf("%s", s);
 }
 */
@@ -14,16 +14,16 @@ import (
 	"unsafe"
 )
 
-func printString(s string) {
+func printString1(s string) {
 	cs := C.CString(s)
 	defer C.free(unsafe.Pointer(cs))
 
-	C.printString(cs)
+	C.printString1(cs)
 }
 
 func main() {
 	s := "hello"
-	printString(s)
+	printString1(s)
 
 	u := uint32(32)
 	i := int32(1)

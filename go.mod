@@ -46,9 +46,11 @@ require (
 	github.com/rpcxio/rpcx-examples v1.1.6
 	github.com/samuel/go-zookeeper v0.0.0-20200724154423-2164a8ac840e // indirect
 	github.com/sirupsen/logrus v1.6.0 // indirect
+	github.com/skip2/go-qrcode v0.0.0-20200617195104-da1b6568686e
 	github.com/smallnest/quick v0.0.0-20200505103731-c8c83f9c76d3 // indirect
 	github.com/smallnest/rpcx v0.0.0-20200819123307-f7fb1d3e5256
 	github.com/tjfoc/gmsm v1.3.2 // indirect
+	github.com/tuotoo/qrcode v0.0.0-20190222102259-ac9c44189bf2
 	github.com/vmihailenco/msgpack v4.0.4+incompatible
 	go.etcd.io/etcd v3.3.24+incompatible // indirect
 	go.opencensus.io v0.22.4 // indirect
@@ -61,10 +63,8 @@ require (
 	google.golang.org/genproto v0.0.0-20200815001618-f69a88009b70 // indirect
 	google.golang.org/grpc v1.31.0 // indirect
 	google.golang.org/protobuf v1.25.0 // indirect
-	gopkg.in/go-playground/pool.v3 v3.1.1 // indirect
 	gopkg.in/ini.v1 v1.60.0 // indirect
 	gopkg.in/linkedin/goavro.v1 v1.0.5 // indirect
-	gopkg.in/yaml.v2 v2.3.0 // indirect
 	gorm.io/driver/mysql v1.0.1
 	gorm.io/gorm v1.20.0
 	sigs.k8s.io/yaml v1.2.0 // indirect
