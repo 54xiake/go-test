@@ -26,3 +26,4 @@ temp
 .vscode/
 
 ./cgo/a.out
+./qrcode/*.png
