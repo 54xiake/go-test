@@ -1,4 +1,4 @@
-module github.com/54xiake/gotest
+module github.com/54xiake/go-test
 
 go 1.14
 
