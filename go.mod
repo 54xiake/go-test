@@ -49,6 +49,7 @@ require (
 	github.com/skip2/go-qrcode v0.0.0-20200617195104-da1b6568686e
 	github.com/smallnest/quick v0.0.0-20200505103731-c8c83f9c76d3 // indirect
 	github.com/smallnest/rpcx v0.0.0-20200819123307-f7fb1d3e5256
+	github.com/smartystreets/goconvey v1.6.4
 	github.com/tjfoc/gmsm v1.3.2 // indirect
 	github.com/tuotoo/qrcode v0.0.0-20190222102259-ac9c44189bf2
 	github.com/vmihailenco/msgpack v4.0.4+incompatible
