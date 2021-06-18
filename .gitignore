@@ -27,3 +27,6 @@ temp
 
 ./cgo/a.out
 /qrcode/*.png
+*.png
+*.gv
+*.svg

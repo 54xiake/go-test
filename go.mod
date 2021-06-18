@@ -8,6 +8,7 @@ require (
 	github.com/aliyun/alibaba-cloud-sdk-go v1.61.431 // indirect
 	github.com/armon/go-metrics v0.3.4 // indirect
 	github.com/astaxie/beego v1.12.2
+	github.com/awalterschulze/gographviz v2.0.3+incompatible
 	github.com/boltdb/bolt v1.3.1
 	github.com/buger/jsonparser v1.0.0 // indirect
 	github.com/coreos/etcd v3.3.24+incompatible // indirect
@@ -17,6 +18,7 @@ require (
 	github.com/fsnotify/fsnotify v1.4.9 // indirect
 	github.com/go-errors/errors v1.1.1 // indirect
 	github.com/gogo/protobuf v1.3.1 // indirect
+	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 // indirect
 	github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e // indirect
 	github.com/gomodule/redigo v2.0.0+incompatible
 	github.com/gorilla/websocket v1.4.2 // indirect
@@ -25,6 +27,7 @@ require (
 	github.com/hashicorp/go-hclog v0.14.1 // indirect
 	github.com/hashicorp/go-immutable-radix v1.2.0 // indirect
 	github.com/hashicorp/serf v0.9.4 // indirect
+	github.com/hitailang/poster v0.0.0-20200529150248-b74b68d0b587
 	github.com/huandu/xstrings v1.3.2 // indirect
 	github.com/influxdata/influxdb-client-go/v2 v2.3.0
 	github.com/influxdata/influxdb1-client v0.0.0-20200515024757-02f0bf5dbca3 // indirect
@@ -44,6 +47,7 @@ require (
 	github.com/rcrowley/go-metrics v0.0.0-20200313005456-10cdbea86bc0
 	github.com/rpcx-ecosystem/rpcx-examples3 v1.1.6
 	github.com/rpcxio/rpcx-examples v1.1.6
+	github.com/rs/xid v1.3.0
 	github.com/samuel/go-zookeeper v0.0.0-20200724154423-2164a8ac840e // indirect
 	github.com/sirupsen/logrus v1.6.0 // indirect
 	github.com/skip2/go-qrcode v0.0.0-20200617195104-da1b6568686e

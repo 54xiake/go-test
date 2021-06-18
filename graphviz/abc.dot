@@ -1,0 +1,21 @@
+digraph {
+  node [shape="record"];
+  edge [style="dashed"];
+
+  abc [style="filled", color="black", fillcolor="chartreuse"]
+  abc -> def [arrowhead = diamond]
+  a -> "0.5" [arrowsize=0.5]
+  a -> "1"
+  a -> "2" [arrowsize=2]
+  a -> "3" [arrowsize=3]
+  b;
+  subgraph cluster_cd{
+    label="c and d";
+    bgcolor="mintcream";
+    c;
+    d;
+  }
+  a -> b;
+  b -> d;
+  c -> d [color="red"];
+}
