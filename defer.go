@@ -19,8 +19,11 @@ func main() {
 	//}()
 	//panic("22222222222")
 
+	deferFuncParameter()
+
 	fmt.Printf("%#v", parseStudent())
 	deferCall()
+
 }
 
 func deferCall() {
@@ -47,4 +50,11 @@ func parseStudent() map[string]student {
 		m[stu.Name] = stu
 	}
 	return m
+}
+
+func deferFuncParameter() {
+	var aInt = 1
+	defer fmt.Println(aInt)
+	aInt = 2
+	return
 }
