@@ -5,6 +5,7 @@ go 1.14
 require (
 	github.com/360EntSecGroup-Skylar/excelize/v2 v2.3.2
 	github.com/54xiake/gomodone v1.0.0
+	github.com/adamzy/cedar-go v0.0.0-20170805034717-80a9c64b256d // indirect
 	github.com/aliyun/alibaba-cloud-sdk-go v1.61.431 // indirect
 	github.com/armon/go-metrics v0.3.4 // indirect
 	github.com/astaxie/beego v1.12.2
@@ -29,6 +30,7 @@ require (
 	github.com/hashicorp/serf v0.9.4 // indirect
 	github.com/hitailang/poster v0.0.0-20200529150248-b74b68d0b587
 	github.com/huandu/xstrings v1.3.2 // indirect
+	github.com/huichen/sego v0.0.0-20180617034105-3f3c8a8cfacc
 	github.com/influxdata/influxdb-client-go/v2 v2.3.0
 	github.com/influxdata/influxdb1-client v0.0.0-20200515024757-02f0bf5dbca3 // indirect
 	github.com/jmespath/go-jmespath v0.3.0 // indirect

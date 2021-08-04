@@ -17,6 +17,7 @@
 .DS_Store
 .AppleDouble
 .LSOverride
+go.sum
 
 .idea/
 
