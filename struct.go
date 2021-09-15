@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
 )
 
@@ -74,4 +75,64 @@ func main() {
 
 	//{20190707212318 26.87 [{手机 23.9 [{红色} {蓝色}]} {电脑 123.9 [{红色} {蓝色}]}]}
 
+	//结构体比较
+
+	TestStructJunior()
+
+	testReturn()
+	testReturn2()
+}
+
+func testReturn() (i int) {
+	i = 1
+	defer func() {
+		i = i + 1
+		fmt.Println(i)
+	}()
+	return 0
+}
+
+func testReturn2() int {
+	i := 1
+	defer func(x int) {
+		x = x + 1
+		fmt.Println(x)
+	}(i)
+	return 0
+}
+
+type Dog struct {
+	name string
+	//friends map[int]string  //若加上这个属性，则会报错 invalid operation: dog1 == dog2 (struct containing map[int]string cannot be compared)
+}
+
+func (dog *Dog) SetName(name string) {
+	dog.name = name
+}
+
+func (dog Dog) Name() string {
+	return dog.name
+}
+
+func TestStructJunior() {
+	dog1 := Dog{name: "one"}
+	fmt.Println(dog1)
+	var dog2 Dog = dog1
+	//dog1.SetName("two")  //若加上这个语句， 下面的值就不会相等
+	fmt.Println(dog2)
+
+	if dog1 == dog2 {
+		fmt.Println("dog1==dog2")
+	} else {
+		fmt.Println("dog1!=dog2")
+	}
+
+	a := errors.New("abc")
+	b := errors.New("abc")
+
+	if a == b {
+		fmt.Println("===")
+	} else {
+		fmt.Println("!==")
+	}
 }

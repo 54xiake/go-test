@@ -1,28 +1,52 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+	"time"
+)
 
 func main() {
 	/*
 		先defer的后执行
 		recover后输出panic中的信息
 	*/
-	//defer func() {
-	//	if err := recover(); err != nil {
-	//		fmt.Print(err)
-	//	} else {
-	//		fmt.Print("no")
-	//	}
-	//}()
-	//defer func() {
-	//	panic("1111111111111")
-	//}()
-	//panic("22222222222")
+	defer func() {
+		if err := recover(); err != nil {
+			fmt.Println(err)
+		} else {
+			fmt.Println("no")
+		}
+	}()
+	defer func() {
+		//panic("1111111111111")
+		fmt.Println("defer ======")
+	}()
+
+	go func() {
+		//defer func() {
+		//	if err := recover(); err != nil {
+		//		fmt.Println("go ", err)
+		//	}
+		//}()
+		panic("go func panic")
+	}()
+
+	panic("22222222222")
 
 	deferFuncParameter()
 
 	fmt.Printf("%#v", parseStudent())
 	deferCall()
+	i := 0
+	for {
+		//go func(x int) {
+		//	fmt.Println("=============" + strconv.Itoa(x))
+		//}(i)
+		time.Sleep(3 * time.Second)
+		fmt.Println("=============" + strconv.Itoa(i))
+		i++
+	}
 
 }
 
@@ -31,7 +55,7 @@ func deferCall() {
 	defer func() { fmt.Println("打印中") }()
 	defer func() { fmt.Println("打印后") }()
 
-	panic("触发异常")
+	//panic("触发异常")
 }
 
 type student struct {
