@@ -2,51 +2,82 @@ package main
 
 import (
 	"fmt"
-	"strconv"
-	"time"
+	"runtime"
 )
 
 func main() {
-	/*
-		先defer的后执行
-		recover后输出panic中的信息
-	*/
-	defer func() {
-		if err := recover(); err != nil {
-			fmt.Println(err)
-		} else {
-			fmt.Println("no")
-		}
-	}()
-	defer func() {
-		//panic("1111111111111")
-		fmt.Println("defer ======")
-	}()
+	fmt.Println(runtime.NumCPU())
+	runtime.GOMAXPROCS(runtime.NumCPU())
+	//debug.SetMaxThreads(100)
 
-	go func() {
-		//defer func() {
-		//	if err := recover(); err != nil {
-		//		fmt.Println("go ", err)
-		//	}
-		//}()
-		panic("go func panic")
-	}()
+	//go task()
+	//go task()
+	//go task()
+	//go task()
 
-	panic("22222222222")
-
-	deferFuncParameter()
-
-	fmt.Printf("%#v", parseStudent())
-	deferCall()
-	i := 0
 	for {
-		//go func(x int) {
-		//	fmt.Println("=============" + strconv.Itoa(x))
-		//}(i)
-		time.Sleep(3 * time.Second)
-		fmt.Println("=============" + strconv.Itoa(i))
-		i++
+		i := 1
+		defer func(i int) {
+			i++
+			fmt.Println(i)
+		}(i)
 	}
+
+	//select{}
+	//
+	//num := 10
+	//var index *int
+	//index = &num
+	//fmt.Println(&index)
+	//fmt.Println(*index)
+	//
+	//*index = 12
+	//fmt.Println(*index)
+	//fmt.Println(num)
+	//
+	//
+	//
+	//
+	///*
+	//	先defer的后执行
+	//	recover后输出panic中的信息
+	//*/
+	//defer func() {
+	//	if err := recover(); err != nil {
+	//		fmt.Println(err)
+	//	} else {
+	//		fmt.Println("no")
+	//	}
+	//}()
+	//defer func() {
+	//	//panic("1111111111111")
+	//	fmt.Println("defer ======")
+	//}()
+	//
+	//go func() {
+	//	//defer func() {
+	//	//	if err := recover(); err != nil {
+	//	//		fmt.Println("go ", err)
+	//	//	}
+	//	//}()
+	//	panic("go func panic")
+	//}()
+	//
+	//panic("22222222222")
+	//
+	//deferFuncParameter()
+	//
+	//fmt.Printf("%#v", parseStudent())
+	//deferCall()
+	//i := 0
+	//for {
+	//	//go func(x int) {
+	//	//	fmt.Println("=============" + strconv.Itoa(x))
+	//	//}(i)
+	//	time.Sleep(3 * time.Second)
+	//	fmt.Println("=============" + strconv.Itoa(i))
+	//	i++
+	//}
 
 }
 
@@ -81,4 +112,10 @@ func deferFuncParameter() {
 	defer fmt.Println(aInt)
 	aInt = 2
 	return
+}
+
+func task() {
+	for {
+
+	}
 }
