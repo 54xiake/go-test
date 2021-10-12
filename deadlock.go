@@ -19,19 +19,19 @@ func main() {
 	//ch <- 108
 	//ch <- 109
 
-	ch := make(chan int)
-	go func() {
-		for {
-			ch <- 1
-		}
-	}()
+	//ch := make(chan int)
+	//go func() {
+	//	for {
+	//		ch <- 1
+	//	}
+	//}()
 
 	//多次读取
 	//fmt.Println(<-ch, <-ch)
 
-	for v := range ch {
-		fmt.Println(v)
-	}
+	//for v := range ch {
+	//	fmt.Println(v)
+	//}
 
 	//ch1 := make(chan int)
 	//
@@ -59,5 +59,11 @@ func main() {
 	//case <-ch2:
 	//	ch1 <- 10
 	//}
+
+	ch := make(chan int) //声明
+	//向ch中写入数据，ch此时等待读出数据，造成堵塞，使得下方读出数据部分的代码不执行，造成死锁
+	ch <- 89
+	num := <-ch
+	fmt.Println(num)
 
 }
