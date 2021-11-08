@@ -23,6 +23,7 @@ require (
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 // indirect
 	github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e // indirect
 	github.com/gomodule/redigo v2.0.0+incompatible
+	github.com/google/pprof v0.0.0-20211008130755-947d60d73cc0 // indirect
 	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/graphql-go/graphql v0.7.9
 	github.com/hashicorp/consul/api v1.6.0 // indirect
@@ -67,6 +68,7 @@ require (
 	go.opentelemetry.io/otel v0.10.0 // indirect
 	golang.org/x/crypto v0.0.0-20201221181555-eec23a3978ad
 	golang.org/x/exp v0.0.0-20200819202907-27b6b2ade93b // indirect
+	golang.org/x/sys v0.0.0-20211023085530-d6a326fbbf70 // indirect
 	golang.org/x/tools v0.0.0-20200820010801-b793a1359eac // indirect
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
 	google.golang.org/appengine v1.6.6 // indirect
