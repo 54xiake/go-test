@@ -32,3 +32,4 @@ temp
 *.gv
 *.svg
 .dot
+*.db
