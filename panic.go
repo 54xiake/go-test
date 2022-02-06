@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type Person struct {
+type Person1 struct {
 	Name string
 	Age  int
 }

@@ -5,7 +5,7 @@ import "C"
 
 import (
 	"fmt"
-	"github.com/54xiake/gotest/qsort"
+	"github.com/54xiake/go-test/qsort"
 	"unsafe"
 )
 

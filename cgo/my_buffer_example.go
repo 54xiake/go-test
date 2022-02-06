@@ -4,7 +4,7 @@ package main
 //#include <stdio.h>
 import "C"
 import (
-	cgo "github.com/54xiake/gotest/cgo-c++"
+	cgo "github.com/54xiake/go-test/cgo-c++"
 	"unsafe"
 )
 

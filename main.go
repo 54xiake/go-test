@@ -1,7 +1,7 @@
 package main
 
 import (
-	_ "github.com/54xiake/gotest/routers"
+	_ "github.com/54xiake/go-test/routers"
 	"github.com/astaxie/beego"
 )
 

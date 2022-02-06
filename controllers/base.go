@@ -1,7 +1,7 @@
 package test
 
 import (
-	"github.com/54xiake/gotest/utils"
+	"github.com/54xiake/go-test/utils"
 	"github.com/astaxie/beego"
 )
 

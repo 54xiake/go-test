@@ -2,7 +2,7 @@ package routers
 
 import (
 	"fmt"
-	controllers "github.com/54xiake/gotest/controllers"
+	controllers "github.com/54xiake/go-test/controllers"
 	"github.com/astaxie/beego"
 )
 

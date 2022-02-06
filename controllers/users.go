@@ -2,7 +2,7 @@ package test
 
 import (
 	"fmt"
-	"github.com/54xiake/gotest/models"
+	"github.com/54xiake/go-test/models"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"strconv"
