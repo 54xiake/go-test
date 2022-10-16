@@ -11,7 +11,7 @@ func main() {
 	numbers5 := append(numbers4, 11)
 	fmt.Println(cap(numbers5))
 	interfaces := make([]interface{}, 10, 15)
-	for _,v := range numbers4 {
+	for _, v := range numbers4 {
 		interfaces = append(interfaces, v)
 	}
 	aa := SplitArray(interfaces, 3)
@@ -91,7 +91,6 @@ func main() {
 
 	//matrix := [4][2]int{{10,11},{20,21},{30,31},{40,41}}
 
-
 }
 
 func SplitArray(arr []interface{}, num int64) [][]interface{} {
@@ -120,7 +119,7 @@ func SplitArray(arr []interface{}, num int64) [][]interface{} {
 	return segmens
 }
 
-func getMinDis(matrix [][]int , n int) int {
+func getMinDis(matrix [][]int, n int) int {
 	var state [][]int
 
 	// 初始化，横向
@@ -138,13 +137,26 @@ func getMinDis(matrix [][]int , n int) int {
 	for i := 1; i < n; i++ {
 		for j := 1; j < n; j++ {
 			var min int
-			if state[i - 1][j]>=state[i][j - 1] {
-				min = state[i][j - 1]
+			if state[i-1][j] >= state[i][j-1] {
+				min = state[i][j-1]
 			} else {
-				min = state[i - 1][j]
+				min = state[i-1][j]
 			}
 			state[i][j] = matrix[i][j] + min
 		}
 	}
-	return state[n - 1][n - 1]
+	return state[n-1][n-1]
+}
+
+// 切片去重
+func RemoveDuplicateElement(slices []string) []string {
+	result := make([]string, 0, len(slices))
+	temp := map[string]struct{}{}
+	for _, item := range slices {
+		if _, ok := temp[item]; !ok { //如果字典中找不到元素，ok=false，!ok为true，就往切片中append元素。
+			temp[item] = struct{}{}
+			result = append(result, item)
+		}
+	}
+	return result
 }

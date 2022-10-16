@@ -6,7 +6,7 @@ import (
 	"unsafe"
 )
 
-func main()  {
+func main() {
 	testReturn1()
 	fmt.Println("test main")
 
@@ -14,8 +14,8 @@ func main()  {
 	fmt.Println(marginPart)
 	marginPart1 := 33 % 30
 	fmt.Println(marginPart1)
-	fmt.Println(int(-5)/40)
-	fmt.Println(0/40)
+	fmt.Println(int(-5) / 40)
+	fmt.Println(0 / 40)
 
 	seq := []string{"a", "b", "c", "d", "e"}
 
@@ -30,9 +30,8 @@ func main()  {
 
 	fmt.Println(seq)
 
-
-	for n:=1; n<1000; n++ {
-		if (8+1*n)%40==0 {
+	for n := 1; n < 1000; n++ {
+		if (8+1*n)%40 == 0 {
 			fmt.Println(n)
 			fmt.Println(60 + 12*n)
 			break
@@ -59,11 +58,11 @@ func main()  {
 	// 字符个数使用utf8.RuneCountInString
 	fmt.Println(utf8.RuneCountInString(str))
 	//使用下标遍历获取的是ASCII字符，而使用Range遍历获取的是Unicode字符。
-	for k,v := range str{
-		fmt.Printf("v type: %T index,val: %v,%v \n",v,k,v)
+	for k, v := range str {
+		fmt.Printf("v type: %T index,val: %v,%v \n", v, k, v)
 	}
-	for i:=0 ; i< len(str) ; i++{
-		fmt.Printf("v type: %T index,val:%v,%v \n",str[i],i,str[i])
+	for i := 0; i < len(str); i++ {
+		fmt.Printf("v type: %T index,val:%v,%v \n", str[i], i, str[i])
 	}
 
 	return

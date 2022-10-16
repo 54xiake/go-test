@@ -98,7 +98,7 @@ func main() {
 		}
 		return false
 	})
-	p.Publish("hello,  world!")
+	p.Publish("hello, world!")
 	p.Publish("hello, golang!")
 	go func() {
 		for msg := range all {

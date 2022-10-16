@@ -10,7 +10,6 @@ type Person struct {
 	Name string
 }
 
-
 func main() {
 	values := []int32{42, 9, 101, 95, 27, 25}
 
@@ -31,10 +30,10 @@ func main() {
 	personArr = append(personArr, p4)
 
 	//按照最大值排序
-	sort.Slice(personArr,func (i int,j int) bool {
-		return personArr[i].Age>personArr[j].Age
+	sort.Slice(personArr, func(i int, j int) bool {
+		return personArr[i].Age > personArr[j].Age
 	})
-	for _,v := range personArr {
+	for _, v := range personArr {
 		fmt.Println(v)
 	}
 

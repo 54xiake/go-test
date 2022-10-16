@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func main()  {
+func main() {
 	sin := math.Sin(45)
 	fmt.Println(sin)
 

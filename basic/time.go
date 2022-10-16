@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func main()  {
+func main() {
 	t := time.Now()
 	addOneHour := t.Add(time.Hour)
 	addTwoHour := t.Add(2 * time.Hour)
@@ -20,7 +20,6 @@ func main()  {
 	three := 72
 	subThreeDay := date.Add(-time.Duration(three) * time.Hour)
 	fmt.Println(subThreeDay)
-
 
 	addDate := t.AddDate(1, 0, 0)
 	fmt.Println("增加1年：", addDate) // 2021-10-24 22:10:53.328973 +0800 CST

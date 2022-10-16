@@ -11,7 +11,7 @@ func main() {
 	// You can generate a Token from the "Tokens Tab" in the UI
 	const token = "YQcymDsGEX9LhojS3Q3G7FWc4T7Gn8qwlXDl4nZjGrLaFRDki6Vq_Hcxnt439-uxaNr1h1F6tQesr0IJ1DeCGg=="
 	const bucket = "default"
-	const org = "ch168"
+	const org = "xkcms"
 
 	client := influxdb2.NewClient("http://localhost:8086", token)
 	// always close client at the end

@@ -34,3 +34,6 @@ temp
 *.db
 # 不忽略特定文件
 !interview.png
+
+*.out
+*.txt

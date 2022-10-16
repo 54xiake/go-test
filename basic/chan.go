@@ -1,7 +1,10 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
+	"strconv"
 	"time"
 )
 
@@ -30,15 +33,43 @@ func main() {
 			}
 		}*/
 
-	int_chan := make(chan int, 1)
-	string_chan := make(chan string, 1)
-	int_chan <- 1
-	string_chan <- "hello"
+	int_chan := make(chan int, 10)
+	//string_chan := make(chan string, 1)
+
+	go func() {
+		i := 1
+		for {
+			int_chan <- i
+			fmt.Println("test")
+			fmt.Println(len(int_chan))
+			//string_chan <- "hello"
+			i++
+		}
+	}()
+
+	_filePath := "./test.txt"
+	_file, _err := os.OpenFile(_filePath, os.O_WRONLY|os.O_CREATE, 0666)
+	if _err != nil {
+		fmt.Printf("打开文件错误=%v\n", _err)
+	}
+	//提前关闭文件
+	defer _file.Close()
+	//写入文件
+	_writer := bufio.NewWriter(_file)
+
+	for {
+		fmt.Println(len(int_chan))
+		c := <-int_chan
+		//time.Sleep(30000)
+		_writer.WriteString(strconv.Itoa(c) + "\n")
+		_writer.Flush()
+	}
+
 	select {
 	case value := <-int_chan:
 		fmt.Println(value)
-	case value := <-string_chan:
-		panic(value)
+		//case value := <-string_chan:
+		//	panic(value)
 	}
 
 }
