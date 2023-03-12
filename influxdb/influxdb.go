@@ -9,9 +9,9 @@ import (
 
 func main() {
 	// You can generate a Token from the "Tokens Tab" in the UI
-	const token = "YQcymDsGEX9LhojS3Q3G7FWc4T7Gn8qwlXDl4nZjGrLaFRDki6Vq_Hcxnt439-uxaNr1h1F6tQesr0IJ1DeCGg=="
-	const bucket = "default"
-	const org = "xkcms"
+	const token = "LmXc2i3b0BlrIriie9NyC_UnfsjzAvnyLMnbb8hDQje6DMU1A9tPh_Bg2xi55v9V2nCH-lG0LPigW10qvfa4Mg=="
+	const bucket = "test"
+	const org = "test"
 
 	client := influxdb2.NewClient("http://localhost:8086", token)
 	// always close client at the end
@@ -22,13 +22,13 @@ func main() {
 
 	// write line protocol
 	writeAPI.WriteRecord(fmt.Sprintf("stat,unit=temperature avg=%f,max=%f", 23.5, 45.0))
-	writeAPI.WriteRecord(fmt.Sprintf("stat,unit=temperature avg=%f,max=%f", 22.5, 45.0))
+	writeAPI.WriteRecord(fmt.Sprintf("stat,unit=temperature avg=%f,max=%f", 22.5, 55.5))
 	// Flush writes
 	writeAPI.Flush()
 
 	p := influxdb2.NewPoint("stat",
 		map[string]string{"unit": "temperature"},
-		map[string]interface{}{"avg": 24.5, "max": 45},
+		map[string]interface{}{"avg": 24.5, "max": 66.6},
 		time.Now())
 	// write point asynchronously
 	writeAPI.WritePoint(p)
@@ -36,7 +36,7 @@ func main() {
 	p = influxdb2.NewPointWithMeasurement("stat").
 		AddTag("unit", "temperature").
 		AddField("avg", 23.2).
-		AddField("max", 45).
+		AddField("max", 77.7).
 		SetTime(time.Now())
 	// write point asynchronously
 	writeAPI.WritePoint(p)

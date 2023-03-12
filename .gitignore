@@ -37,3 +37,6 @@ temp
 
 *.out
 *.txt
+
+#程序生成文件，不保存
+output
