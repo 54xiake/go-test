@@ -1,6 +1,7 @@
 package libfoo
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -17,4 +18,16 @@ func TestFoo(t *testing.T) {
 
 	//i := Foo(1)
 	//fmt.Printf("%v\n",i)
+}
+
+// go test -bench=. -run=BenchmarkFoo
+func BenchmarkFoo(b *testing.B) {
+	b.ResetTimer()
+	for i := 1; i < b.N; i++ {
+		if add(1, 2) != 3 {
+			fmt.Println("err")
+		} else {
+			fmt.Println("ok")
+		}
+	}
 }

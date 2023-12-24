@@ -73,9 +73,9 @@ func InsertUser(user User) bool {
 func main() {
 	InitDB()
 	user := User{
-		Name: "yugang",
+		Name: "xiaoming",
 	}
-	for i := 0; i < 50000; i++ {
+	for i := 0; i < 10000000; i++ {
 		InsertUser(user)
 	}
 }

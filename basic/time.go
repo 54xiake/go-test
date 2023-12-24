@@ -40,4 +40,7 @@ func main() {
 
 	m := t.Format("2006-01-02 15:04:05") //获取当前格式的日期
 	fmt.Println(m)
+
+	fmt.Println(time.Duration(-1))
+	fmt.Println(time.Duration(1))
 }

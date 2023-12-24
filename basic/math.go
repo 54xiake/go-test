@@ -6,6 +6,18 @@ import (
 )
 
 func main() {
+	//var i int
+	//for {
+	//	i = i + 2
+	//	fmt.Println(i)
+	//	time.Sleep(1*time.Second)
+	//}
+	var n int
+	for i := 1; i <= 200; i++ {
+		n = n + i
+	}
+	fmt.Println(n)
+	return
 	sin := math.Sin(45)
 	fmt.Println(sin)
 

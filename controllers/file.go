@@ -54,7 +54,7 @@ func (c *FileController) UploadExcel() {
 
 	// 用excel读取文件 func (f *File) GetSheetList() []string
 	// 得到第一个工作表的名字
-	sheetList := f_excel.GetSheetList()
+	sheetList := f_excel.GetSheetMap()
 	// 得到第一个工作表的全部单元格
 	rows, err := f_excel.GetRows(sheetList[0])
 	if err != nil {

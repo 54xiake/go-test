@@ -8,6 +8,8 @@ func AddElement(slice []int, e int) []int {
 
 func main() {
 	var numbers4 = []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	tmp := numbers4[:0]
+	fmt.Println(tmp)
 	numbers5 := append(numbers4, 11)
 	fmt.Println(cap(numbers5))
 	interfaces := make([]interface{}, 10, 15)

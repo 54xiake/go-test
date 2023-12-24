@@ -4,8 +4,6 @@ import "C"
 
 import (
 	"fmt"
-
-	_ "../number"
 )
 
 func main() {

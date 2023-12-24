@@ -1,11 +1,11 @@
 package main
 
 /*
-//int foo(int c){
-//    return c+1;
-//};
-//
-//extern int foo(int a);
+int foo(int c){
+   return c+1;
+};
+
+extern int foo(int a);
 
 #cgo CFLAGS: -I ./
 #cgo LDFLAGS: -L ${SRCDIR}/ -l foo
